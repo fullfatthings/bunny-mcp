@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "test": "node test.js",
-    "version": "node scripts/sync-version.js && git add server.json"
+    "version": "node scripts/sync-version.js && git add server.json",
+    "postversion": "git push --follow-tags"
   },
   "keywords": [
     "mcp",

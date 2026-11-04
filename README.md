@@ -85,6 +85,8 @@ npm install
 npm test
 ```
 
+To release, run `npm version patch` (or `minor` or `major`). It updates `package.json` and `server.json`, commits, tags and pushes; the tag starts a GitHub Action that publishes to npm and the MCP registry.
+
 ## Licence
 
 MIT. See [LICENSE](LICENSE).
