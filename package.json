@@ -1,0 +1,44 @@
+{
+  "name": "@fullfatthings/bunny-mcp",
+  "version": "1.0.0",
+  "description": "Unofficial MCP server for debugging bunny.net CDN pull zones and managing bunny Shield (WAF, rate limits, bot detection).",
+  "main": "index.js",
+  "bin": {
+    "bunny-mcp": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bunny.net",
+    "bunnycdn",
+    "cdn",
+    "waf",
+    "shield",
+    "claude"
+  ],
+  "author": "Full Fat Things (https://www.fullfatthings.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullfatthings/bunny-mcp.git"
+  },
+  "homepage": "https://github.com/fullfatthings/bunny-mcp#readme",
+  "bugs": "https://github.com/fullfatthings/bunny-mcp/issues",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  }
+}
