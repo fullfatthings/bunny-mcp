@@ -285,7 +285,7 @@ const destructive = { readOnlyHint: false, destructiveHint: true };
 export const registers = (annotations, readonly) => !readonly || annotations?.readOnlyHint === true;
 const READONLY = /^(1|true|yes|on)$/i.test(process.env.BUNNY_READONLY ?? "");
 
-const server = new McpServer({ name: "bunny", version: "1.0.0" });
+const server = new McpServer({ name: "bunny", version: "1.0.1" });
 const register = (name, def, handler) => registers(def.annotations, READONLY) && server.registerTool(name, def, handler);
 
 register(

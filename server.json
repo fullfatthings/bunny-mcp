@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.fullfatthings/bunny-mcp",
+  "title": "bunny.net CDN and Shield",
+  "description": "Debug bunny.net CDN pull zones and manage bunny Shield: WAF, rate limits, bot detection, event logs",
+  "repository": {
+    "url": "https://github.com/fullfatthings/bunny-mcp",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@fullfatthings/bunny-mcp",
+      "version": "1.0.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "BUNNY_API_KEY",
+          "description": "bunny.net account API key (full account access)",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "BUNNY_READONLY",
+          "description": "Set to 1 to register only read tools",
+          "isRequired": false
+        }
+      ]
+    }
+  ]
+}
