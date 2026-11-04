@@ -10,7 +10,8 @@
     "index.js"
   ],
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "version": "node scripts/sync-version.js && git add server.json"
   },
   "keywords": [
     "mcp",

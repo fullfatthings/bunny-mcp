@@ -3,6 +3,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
+import { readFileSync } from "node:fs";
 
 const BASE = "https://api.bunny.net";
 const KEY = process.env.BUNNY_API_KEY;
@@ -285,7 +286,8 @@ const destructive = { readOnlyHint: false, destructiveHint: true };
 export const registers = (annotations, readonly) => !readonly || annotations?.readOnlyHint === true;
 const READONLY = /^(1|true|yes|on)$/i.test(process.env.BUNNY_READONLY ?? "");
 
-const server = new McpServer({ name: "bunny", version: "1.0.1" });
+const { version } = JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf8"));
+const server = new McpServer({ name: "bunny", version });
 const register = (name, def, handler) => registers(def.annotations, READONLY) && server.registerTool(name, def, handler);
 
 register(
