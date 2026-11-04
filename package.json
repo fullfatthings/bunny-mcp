@@ -4,7 +4,7 @@
   "description": "Unofficial MCP server for debugging bunny.net CDN pull zones and managing bunny Shield (WAF, rate limits, bot detection).",
   "main": "index.js",
   "bin": {
-    "bunny-mcp": "./index.js"
+    "bunny-mcp": "index.js"
   },
   "files": [
     "index.js"
